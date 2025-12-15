@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <title>Document</title>
+</head>
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="logo.svg" alt="logo">
+        </div>
+        <div class="search-wrapper">
+            <button class="search-btn" aria-label="Open search">
+                <img src="search.svg" alt="search-logo">
+            </button>
+            <input type="text" class="search-input" placeholder="what do you want to listen to?" />
+        </div>
+        <div class="buttons">
+            <button class="auth-btn">Sign Up</button>
+            <button class="auth-btn">Log in</button>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container flex">
+        <div class="left border">
+            <!-- shift the home button position -->
+            <!-- <div class="home"></div> -->
+            <section class="library">
+                <h2>Your Library</h2>
+
+                <div class="MakePlaylist">
+                    <div class="card">
+                        <h3>Create your playlist</h3>
+                        <p>make your mode</p>
+                        <button class="createPlaylist">Create playlist</button>
+                    </div>
+                </div>
+
+            </section>
+
+            <footer class="sidebar-footer">
+                <div class="footer-content">
+                    <p>&copy; 2025 Fossiltune</p>
+                    <p>Created by Anirban Banerjee</p>
+                    <p>Joy rock </p>
+
+
+                </div>
+            </footer>
+        </div>
+
+        <div class="right border"></div>
+
+    </div>
+
+</body>
+
+<script>
+    const searchBtn = document.querySelector('.search-btn');
+    const searchInput = document.querySelector('.search-input');
+
+    searchBtn.addEventListener('click', () => {
+        searchInput.classList.toggle('active');
+        if (searchInput.classList.contains('active')) {
+            searchInput.focus();
+        }
+    });
+
+    // Close search when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.search-wrapper')) {
+            searchInput.classList.remove('active');
+        }
+    });
+</script>
+
+</html>
