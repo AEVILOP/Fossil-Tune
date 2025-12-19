@@ -131,6 +131,12 @@ body {
     color: var(--primary-color);
 }
 
+.container {
+    display: flex;
+    gap: 20px;
+    min-height: calc(100vh - 70px);
+}
+
 .left {
     display: flex;
     flex-direction: column;
@@ -298,7 +304,7 @@ body {
 }
 
 /* Arrow Icons */
-/* .nav {
+.nav {
     position: absolute;
     top: 50%;
     right: 10px;
@@ -308,7 +314,7 @@ body {
     gap: 12px;
 }
 
-.nav svg {
+/* .nav svg {
     width: 30px;
     height: 30px;
     fill: var(--text-secondary);
@@ -400,7 +406,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 12px;
     border-radius: 6px;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
 }
 
 /* buttons stay centered */
@@ -442,6 +455,7 @@ body {
 .musicbuttons img:nth-child(2):hover {
     transform: scale(1.2);
 }
+
 /* .musicbuttons {
     display: flex;
     gap: 24px;
@@ -493,12 +507,16 @@ body {
 }
 
 .songinfo {
-    
     color: #000000;
     font-weight: 500;
     min-height: 20px;
     text-align: left;
     font-size: large;
+    flex: 1;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .songtime {
@@ -506,14 +524,1007 @@ body {
     color: #000000;
     opacity: 0.8;
     min-height: 18px;
-    text-align: right;
-
+    text-align: center;
+    flex: 0 0 auto;
+    min-width: 100px;
 }
-.abovebar{
+
+.volume-container {
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    flex: 0 0 auto;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+#volume-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+    filter: invert(0);
+    flex-shrink: 0;
+}
+
+#volume-icon:hover {
+    opacity: 1;
+}
+
+.volume-bar-wrapper {
+    display: none;
+    width: 6px;
+    height: 100px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    padding: 8px 4px;
+    z-index: 1000;
+}
+
+.volume-bar-wrapper.show {
+    display: flex;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.volume-bar {
+    width: 6px;
+    height: 100%;
+    -webkit-appearance: slider-vertical;
+    -moz-appearance: slider-vertical;
+    appearance: slider-vertical;
+    background: #000000;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.volume-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #000000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.volume-bar::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.volume-bar::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #000000;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.volume-bar::-moz-range-thumb:hover {
+    transform: scale(1.2);
+}
+
+.volume-bar::-moz-range-track {
+    background: transparent;
+    border: none;
+}
+
+.abovebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     gap: 12px;
+}
 
+.close-btn {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.close-btn img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}
+
+@media (max-width: 1400px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 400px;
+        max-height: 100vh;
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        border-radius: 0;
+        background-color: var(--bg-sidebar);
+        overflow-y: auto;
+    }
+
+    .left.active {
+        left: 0;
+    }
+
+    .close-btn {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1002;
+    }
+
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1001;
+        cursor: pointer;
+    }
+
+    .hamburger.hidden {
+        display: none;
+    }
+
+    .hamburger img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .right {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .playbar {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        border-radius: 0;
+    }
+
+    .container {
+        padding-bottom: 150px;
+    }
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .left {
+        width: 350px;
+    }
+
+    .header-container {
+        max-width: 100%;
+        gap: 10px;
+    }
+
+    .search-input.active {
+        width: 200px;
+        max-width: 200px;
+    }
+
+    .songlist {
+        height: 500px;
+    }
+
+    .Fossiltune-playlists .card img {
+        width: 120px;
+    }
+
+    .cardContainer {
+        gap: 15px;
+    }
+
+    .auth-btn {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+
+    .musicbuttons {
+        gap: 20px;
+    }
+
+    .musicbuttons img:nth-child(2) {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Small Tablets (768px) */
+@media (max-width: 768px) {
+    .left {
+        width: 300px;
+        max-height: 80vh;
+    }
+
+    .header-container {
+        gap: 8px;
+        padding: 8px 15px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .search-wrapper {
+        flex: 0.5;
+    }
+
+    .search-btn img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .search-input.active {
+        width: 150px;
+        max-width: 150px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .auth-btn {
+        padding: 5px 12px;
+        font-size: 11px;
+    }
+
+    .songlist {
+        height: 400px;
+    }
+
+    .songRow {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+
+    .songRow .name {
+        font-size: 13px;
+    }
+
+    .songRow .artist {
+        font-size: 11px;
+    }
+
+    .playnow span {
+        padding: 8px;
+        font-size: 12px;
+        width: 50px;
+    }
+
+    .Fossiltune-playlists .card img {
+        width: 100px;
+    }
+
+    .cardContainer {
+        gap: 12px;
+        margin: 8px;
+    }
+
+    .card {
+        padding: 8px;
+    }
+
+    .card h2 {
+        font-size: 14px;
+    }
+
+    .card p {
+        font-size: 11px;
+    }
+
+    .songinfo {
+        font-size: medium;
+        max-width: 140px;
+    }
+
+    .songtime {
+        font-size: 12px;
+        flex: 0 0 auto;
+        min-width: 80px;
+    }
+
+    .volume-bar-wrapper {
+        height: 80px;
+    }
+
+    #volume-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .musicbuttons {
+        gap: 16px;
+    }
+
+    .musicbuttons img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .musicbuttons img:nth-child(2) {
+        width: 45px;
+        height: 45px;
+        padding: 8px;
+    }
+
+    .soundbar {
+        width: 55%;
+    }
+
+    .hamburger img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .close-btn img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .playbar {
+        padding: 12px 15px 14px;
+    }
+
+    .abovebar {
+        gap: 8px;
+    }
+}
+
+/* Portrait Tablets/Large Phones (480px - 768px) */
+@media (max-width: 600px) {
+    header {
+        padding: 8px 12px;
+    }
+
+    .header-container {
+        gap: 6px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .search-wrapper {
+        flex: 0.4;
+    }
+
+    .search-btn img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .search-input.active {
+        width: 120px;
+        max-width: 120px;
+        font-size: 12px;
+    }
+
+    .buttons {
+        gap: 6px;
+        display: none;
+    }
+
+    .left {
+        width: 280px;
+        max-height: 70vh;
+        top: 60px;
+    }
+
+    .library {
+        padding: 15px;
+    }
+
+    .library h2 {
+        font-size: 18px;
+    }
+
+    .songlist {
+        height: 350px;
+    }
+
+    .songRow {
+        padding: 8px 10px;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .songRow img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .songRow .name {
+        font-size: 12px;
+    }
+
+    .songRow .artist {
+        font-size: 10px;
+    }
+
+    .playnow {
+        gap: 5px;
+    }
+
+    .playnow span {
+        padding: 6px;
+        font-size: 10px;
+        width: 45px;
+    }
+
+    .playnow img {
+        width: 18px;
+    }
+
+    .Fossiltune-playlists {
+        padding: 15px;
+    }
+
+    .Fossiltune-playlists h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .cardContainer {
+        gap: 10px;
+        margin: 5px;
+        padding-bottom: 120px;
+    }
+
+    .Fossiltune-playlists .card {
+        padding: 6px;
+    }
+
+    .Fossiltune-playlists .card img {
+        width: 90px;
+        margin-bottom: 8px;
+    }
+
+    .card h2 {
+        font-size: 13px;
+    }
+
+    .card p {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .play svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .container {
+        padding-bottom: 120px;
+        gap: 10px;
+    }
+
+    .playbar {
+        padding: 10px 12px;
+    }
+
+    .abovebar {
+        gap: 6px;
+    }
+
+    .songinfo {
+        font-size: small;
+        min-height: 16px;
+        max-width: 120px;
+    }
+
+    .songtime {
+        font-size: 10px;
+        min-height: 14px;
+        flex: 0 0 auto;
+        min-width: 70px;
+    }
+
+    .volume-bar-wrapper {
+        height: 70px;
+    }
+
+    #volume-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .musicbuttons {
+        gap: 12px;
+    }
+
+    .musicbuttons img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .musicbuttons img:nth-child(2) {
+        width: 40px;
+        height: 40px;
+        padding: 6px;
+    }
+
+    .soundbar {
+        width: 50%;
+        height: 5px;
+    }
+
+    .circle {
+        width: 12px;
+        height: 12px;
+    }
+
+    .hamburger {
+        top: 12px;
+        right: 12px;
+    }
+
+    .hamburger img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .close-btn {
+        top: 12px;
+        right: 12px;
+    }
+
+    .close-btn img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .sidebar-footer {
+        padding: 12px;
+    }
+
+    .footer-content p {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+}
+
+/* iPhone SE and Small Phones (375px - 480px) */
+@media (max-width: 480px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        padding: 6px 10px;
+        border-bottom: 1px solid #333;
+    }
+
+    .header-container {
+        gap: 4px;
+        max-width: 100%;
+    }
+
+    .logo {
+        width: 70px;
+    }
+
+    .search-wrapper {
+        flex: 0.3;
+    }
+
+    .search-btn img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .search-input {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+
+    .search-input.active {
+        width: 100px;
+        max-width: 100px;
+    }
+
+    .search-input::placeholder {
+        font-size: 10px;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+    .container {
+        gap: 0;
+        padding-bottom: 110px;
+        min-height: calc(100vh - 60px);
+    }
+
+    .left {
+        width: 75vw;
+        max-height: 65vh;
+        top: 60px;
+        padding: 12px;
+    }
+
+    .left.active {
+        left: 0;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .library {
+        padding: 10px;
+    }
+
+    .library h2 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .songlist {
+        height: 300px;
+        scrollbar-width: thin;
+    }
+
+    .songlist ul li {
+        padding: 6px;
+        margin: 4px;
+    }
+
+    .songRow {
+        padding: 6px 8px;
+        gap: 6px;
+        margin-bottom: 6px;
+        border-radius: 4px;
+    }
+
+    .songRow img {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+    }
+
+    .songRow .info {
+        min-width: 0;
+    }
+
+    .songRow .name {
+        font-size: 11px;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .songRow .artist {
+        font-size: 9px;
+        color: #aaa;
+    }
+
+    .playnow {
+        gap: 2px;
+        flex-shrink: 0;
+    }
+
+    .playnow span {
+        display: none;
+    }
+
+    .playnow img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .right {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .Fossiltune-playlists {
+        padding: 10px;
+    }
+
+    .Fossiltune-playlists h1 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .cardContainer {
+        gap: 8px;
+        margin: 0;
+        padding-bottom: 100px;
+        justify-content: center;
+    }
+
+    .Fossiltune-playlists .card {
+        padding: 5px;
+        width: 100%;
+        max-width: 160px;
+    }
+
+    .Fossiltune-playlists .card img {
+        width: 100%;
+        max-width: 80px;
+        margin: 0 auto 6px;
+        display: block;
+    }
+
+    .card h2 {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .card p {
+        font-size: 9px;
+        margin: 4px 0 0 0;
+        line-height: 1.2;
+    }
+
+    .play {
+        padding: 25px;
+    }
+
+    .play svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .playbar {
+        padding: 8px 10px 10px;
+        gap: 8px;
+    }
+
+    .abovebar {
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+
+    .songinfo {
+        font-size: 11px;
+        min-height: 14px;
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100px;
+    }
+
+    .songtime {
+        font-size: 9px;
+        min-height: 12px;
+        flex: 0 0 auto;
+        min-width: 65px;
+    }
+
+    .volume-bar-wrapper {
+        height: 60px;
+    }
+
+    #volume-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .musicbuttons {
+        gap: 8px;
+        flex: 0 0 100%;
+        justify-content: center;
+        order: 3;
+    }
+
+    .musicbuttons img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .musicbuttons img:nth-child(2) {
+        width: 36px;
+        height: 36px;
+        padding: 4px;
+    }
+
+    .soundbar {
+        width: 45%;
+        height: 4px;
+        margin-top: 4px;
+    }
+
+    .circle {
+        width: 10px;
+        height: 10px;
+    }
+
+    .hamburger {
+        top: 10px;
+        right: 10px;
+        z-index: 1001;
+    }
+
+    .hamburger img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 10px;
+    }
+
+    .close-btn img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .sidebar-footer {
+        padding: 10px;
+        border-top: 1px solid #333;
+    }
+
+    .footer-content p {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+}
+
+/* Extra Small Phones (320px - 375px) */
+@media (max-width: 375px) {
+    .header-container {
+        gap: 2px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .search-wrapper {
+        flex: 0.25;
+    }
+
+    .search-btn img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .search-input.active {
+        width: 80px;
+        max-width: 80px;
+    }
+
+    .left {
+        width: 85vw;
+        padding: 10px;
+    }
+
+    .library {
+        padding: 8px;
+    }
+
+    .library h2 {
+        font-size: 14px;
+    }
+
+    .songlist {
+        height: 280px;
+    }
+
+    .songRow {
+        padding: 5px 6px;
+        gap: 4px;
+    }
+
+    .songRow img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .songRow .name {
+        font-size: 10px;
+    }
+
+    .songRow .artist {
+        font-size: 8px;
+    }
+
+    .right {
+        padding: 8px;
+    }
+
+    .Fossiltune-playlists {
+        padding: 8px;
+    }
+
+    .Fossiltune-playlists h1 {
+        font-size: 18px;
+    }
+
+    .Fossiltune-playlists .card {
+        max-width: 140px;
+    }
+
+    .Fossiltune-playlists .card img {
+        max-width: 70px;
+    }
+
+    .card h2 {
+        font-size: 11px;
+    }
+
+    .card p {
+        font-size: 8px;
+    }
+
+    .songinfo {
+        font-size: 10px;
+        max-width: 80px;
+    }
+
+    .songtime {
+        font-size: 8px;
+        min-width: 55px;
+    }
+
+    .volume-bar-wrapper {
+        height: 50px;
+    }
+
+    #volume-icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .musicbuttons {
+        gap: 6px;
+    }
+
+    .musicbuttons img:nth-child(2) {
+        width: 32px;
+        height: 32px;
+    }
+
+    .soundbar {
+        width: 40%;
+    }
+
+    .hamburger img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .close-btn img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .sidebar-footer {
+        padding: 8px;
+    }
+
+    .footer-content p {
+        font-size: 11px;
+    }
 }

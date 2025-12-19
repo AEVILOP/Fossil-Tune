@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "Acid",
+        "artist": "Fossils",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766130543/Acid_-_Rupam_Islam_dfqvdj.mp3"
+    },
+    {
+        "id": 2,
+        "title": "Ekla Ghor",
+        "artist": "Fossils",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766130537/Ekla_Ghor_-_Fossils_zshy6u.mp3"
+    },
+    {
+        "id": 3,
+        "title": "bishakto manush",
+        "artist": "Fossils",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766130544/Bishakto_Manush_zljkkq.mp4"
+    },
+    {
+        "id": 4,
+        "title": "kyano Korle",
+        "artist": "Fossils",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766130542/Kyano_Korle_-_Rupam_Islam_nn57rj.mp3"
+    },
+    {
+        "id": 5,
+        "title": "hansnuhana",
+        "artist": "Fossils",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766130544/Hansnuhana___Fossils___Rupam_Islam___Audio_Song_256kbps_kxvc7b.webm"
+    },
+    {
+        "id": 6,
+        "title": "Dyakho manoshi",
+        "artist": "Fossils",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766130539/Dyakho_Manoshi_-_Rupam_Islam_vjouut.mp3"
+    },
+    {
+        "id": 7,
+        "title": "Bicycle Chor",
+        "artist": "Fossils",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766130539/Dyakho_Manoshi_-_Rupam_Islam_vjouut.mp3"
+    },
+    {
+        "id": 8,
+        "title": "Phire Chaulo",
+        "artist": "Fossils",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766130543/Phire_Chaulo_-_Rupam_Islam_xnihcu.mp3"
+    },
+    {
+        "id": 9,
+        "title": "Nemesis",
+        "artist": "Fossils",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766130545/Nemesis_-_Rupam_Islam_mvadao.mp3"
+    }
+]

@@ -19,16 +19,19 @@
             </button>
             <input type="text" class="search-input" placeholder="what do you want to listen to?" />
         </div>
-        <div class="buttons">
+        <!-- <div class="buttons">
             <button class="auth-btn">Sign Up</button>
             <button class="auth-btn">Log in</button>
-        </div>
+        </div> -->
     </div>
 </header>
 
 <body>
     <div class="container flex">
         <div class="left border">
+            <div class="close-btn">
+                <img src="assests/close.svg" alt="close">
+            </div>
             <!-- shift the home button position -->
             <!-- <div class="home"></div> -->
             <section class="library">
@@ -55,18 +58,10 @@
         </div>
 
         <div class="right border">
-            <!-- <div class="nav">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor"
-                    fill="none" stroke="currentColor" stroke-width="1.5">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M13.5 16C13.5 16 10.5 13.054 10.5 12C10.5 10.9459 13.5 8 13.5 8" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor"
-                    fill="none" stroke="currentColor" stroke-width="1.5">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M10.5 8C10.5 8 13.5 10.946 13.5 12C13.5 13.0541 10.5 16 10.5 16" />
-                </svg>
-            </div> -->
+            <div class="hamburger">
+                <img src="assests/hamburger.svg" alt="menu">
+            </div>
+
             <div class="Fossiltune-playlists">
                 <h1>Fossiltune playlists</h1>
 
@@ -109,6 +104,14 @@
 
                         <div class="songtime">
                             <!-- static time -->
+                        </div>
+                        <div class="volume-container">
+                            <div class="volume-control">
+                                <img id="volume-icon" src="assests/volume.svg" alt="volume">
+                                <div class="volume-bar-wrapper">
+                                    <input type="range" id="volumeSlider" class="volume-bar" min="0" max="100" value="100">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
