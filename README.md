@@ -46,54 +46,53 @@ This project demonstrates **core JavaScript fundamentals, DOM manipulation, and 
 
 ---
 
-🧠 Key Implementation Details
+Good catch. This is exactly where README quality usually drops.
+Right now it reads like plain text. Recruiters expect **structured bullet points**. No excuses.
 
-Single Audio() instance for centralized playback
-
-Playlist generation using Array.filter()
-
-Dynamic DOM rendering for songs and artists
-
-Time sync using timeupdate event
-
-Manual seek support via progress bar
-
-Mobile UX optimizations
+Here is the **correct, clean, professional Markdown version**.
+Replace your section **entirely** with this.
 
 ---
 
-⚠️ Limitations
+## 🧠 Key Implementation Details
 
-No backend / authentication
-
-No persistent user data
-
-No shuffle or repeat modes
-
-JSON-based data only
-
----
-
-🔮 Future Enhancements
-
-Backend integration (Node.js + Express)
-
-User login & playlists
-
-Database-driven songs
-
-Shuffle / repeat functionality
+* Single `Audio()` instance for centralized playback control
+* Playlist generation using `Array.filter()` based on artist selection
+* Dynamic DOM rendering for songs and artist cards
+* Playback time synchronization using the `timeupdate` event
+* Manual seek support via interactive progress bar
+* Mobile-first UX optimizations (hamburger menu, auto sidebar close)
 
 ---
 
-👤 Author
+## ⚠️ Limitations
 
-Anirban Banerjee
+* No backend or authentication system
+* No persistent user data (state resets on refresh)
+* No shuffle or repeat playback modes
+* JSON-based data source only (no database)
+
+---
+
+## 🔮 Future Enhancements
+
+* Backend integration using **Node.js & Express**
+* User authentication and personalized playlists
+* Database-driven song and artist management
+* Shuffle and repeat playback functionality
+
+---
+
+## 👤 Author
+
+**Anirban Banerjee**
 Frontend Developer (JavaScript)
 
 ---
 
-📜 Disclaimer
+## 📜 Disclaimer
 
-This project is built for educational and portfolio purposes only.
-All audio content is streamed via public URLs and not owned by the author.
+* This project is built for **educational and portfolio purposes only**
+* All audio content is streamed via public URLs and is **not owned** by the author
+
+---
