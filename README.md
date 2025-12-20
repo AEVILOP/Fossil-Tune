@@ -26,7 +26,7 @@ This project demonstrates **core JavaScript fundamentals, DOM manipulation, and 
 ## 🖼️ Screenshots
 
 ### Desktop View
-![Desktop View](screenshots/desktop.png)
+![Desktop View](<img width="716" height="1600" alt="Image" src="https://github.com/user-attachments/assets/0c5efa9e-b1a1-40f4-a591-9ea04cae6f59" />)
 
 ### Mobile View
 ![Mobile View](screenshots/mobile.png)
