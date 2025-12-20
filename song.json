@@ -52,5 +52,149 @@
         "title": "Nemesis",
         "artist": "Fossils",
         "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766130545/Nemesis_-_Rupam_Islam_mvadao.mp3"
+    },
+    {
+        "id": 10,
+        "title": "2441139 bela bose",
+        "artist": "Anjan Dutt",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766257754/2441139_Bela_Bose_Lyrical_Video_2441139_%E0%A6%AC%E0%A7%87%E0%A6%B2%E0%A6%BE_%E0%A6%AC%E0%A7%8B%E0%A6%B8_Anjan_Dutta_Shunte_Ki_Chao_Bangla_Song_-_Saregama_Bengali_suqf9v.mp3"
+    },
+    {
+        "id": 11,
+        "title": "Tumi na Thakle",
+        "artist": "Anjan Dutt",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766257755/Tumi_Na_Thakle_-_Anjan_Dutt_xdu1tf.mp3"
+    },
+    {
+        "id": 12,
+        "title": "Mary Ann",
+        "artist": "Anjan Dutt",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766257757/Mary_Ann_-_Anjan_Dutt_vcsast.mp3"
+    },
+    {
+        "id": 13,
+        "title": "Ranjana Ami Ar Ashbona",
+        "artist": "Anjan Dutt",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766257754/Ranjana_Ami_Ar_Ashbona_%E0%A6%B0%E0%A6%9E%E0%A7%8D%E0%A6%9C%E0%A6%A8%E0%A6%BE_%E0%A6%86%E0%A6%AE%E0%A6%BF_%E0%A6%86%E0%A6%B0_%E0%A6%86%E0%A6%B8%E0%A6%AC%E0%A6%A8%E0%A6%BE_Anjan_Dutt_Audio_-_Saregama_Bengali_jbzgzz.mp3"
+    },
+    {
+        "id": 14,
+        "title": "Boba tunnel",
+        "artist": "Anupam Roy",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766258551/Official_Boba_Tunnel_Video_Song_Bengali_Film_Chotushkone_Anupam_Roy_-_T-Series_Bangla_khawig.mp3"
+    },
+    {
+        "id": 15,
+        "title": "Moner Manush",
+        "artist": "Anupam Roy",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766258550/Moner_Manush_-_Anupam_Roy_k2x1wl.mp3"
+    },
+    {
+        "id": 16,
+        "title": "Amake Amar Moto Thakte Dao",
+        "artist": "Anupam Roy",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766258547/Amake_Aamar_Moto_Thaakte_Dao_-_Anupam_Roy_e7pwwq.mp3"
+    },
+    {
+        "id": 17,
+        "title": "ekhon onek raat",
+        "artist": "Anupam Roy",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766258547/Ekhon_Onek_Raat_%E0%A6%8F%E0%A6%96%E0%A6%A8_%E0%A6%85%E0%A6%A8%E0%A7%87%E0%A6%95_%E0%A6%B0%E0%A6%BE%E0%A6%A4_Lyrical_Hemlock_Society_Anupam_Parambrata_Koel_SVF_Music_-_SVF_Music_q8otcs.mp3"
+    },
+    {
+        "id": 18,
+        "title": "Jeno Dhak Ache ",
+        "artist": "Bhoomi",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766260895/Bhoomi_-_Jeno_Dhaak_Achhe_Aar_Kathi_Nai__mp3.pm_ymqufu.mp3"
+    },
+    {
+        "id": 19,
+        "title": "Bhaddoro Ashwino Mase",
+        "artist": "Bhoomi",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766260895/Bhoomi_-_Bhadoro_Ashwin_Maase__mp3.pm_ejloio.mp3"
+    },
+    {
+        "id": 20,
+        "title": "Mnush manusher jonyo",
+        "artist": "Bhoomi",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766260895/Bhoomi_-_Manush_Manusheri_Jonno_Album_Version_Album_Version__mp3.pm_gncwma.mp3"
+    },
+    {
+        "id": 21,
+        "title": "Barandya roddur",
+        "artist": "Bhoomi",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766260895/Bhoomi_-_Barandaye_Roddur__mp3.pm_gstoxx.mp3"
+    },
+    {
+        "id": 22,
+        "title": "bandhu tomay",
+        "artist": "Chandrabindoo",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766258933/Bandhu_Tomaye_-_Chandrabindoo_tnhjui.mp3"
+    },
+    {
+        "id": 23,
+        "title": "Mone",
+        "artist": "Chandrabindoo",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766258932/Mone_-_Chandrabindoo_xiwifd.mp3"
+    },
+    {
+        "id": 24,
+        "title": "Roga Bolo Na",
+        "artist": "Chandrabindoo",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766258931/Roga_Bolo_Na_-_Chandrabindoo_uwzvkh.mp3"
+    },
+    {
+        "id": 25,
+        "title": "Amar Bhindeshi Tara",
+        "artist": "Chandrabindoo",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766258930/Amar_Bhindeshi_Tara_-_Chondrobindu_Lyrics_-_THE_WORLD_OF_LYRICS_zcdbmx.mp3"
+    },
+    {
+        "id": 26,
+        "title": "kobita",
+        "artist": "James",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766259203/%E0%A6%95%E0%A6%AC%E0%A6%BF%E0%A6%A4%E0%A6%BE_%E0%A6%A4%E0%A7%81%E0%A6%AE%E0%A6%BF_%E0%A6%B8%E0%A7%8D%E0%A6%AC%E0%A6%AA%E0%A7%8D%E0%A6%A8%E0%A6%9A%E0%A6%BE%E0%A6%B0%E0%A6%BF%E0%A6%A8%E0%A7%80_%E0%A6%B9%E0%A6%AF%E0%A6%BC%E0%A7%87_Kobita_James_Lyrics_-_Music_BD_j9p0k9.mp3"
+    },
+    {
+        "id": 27,
+        "title": "Hamari Adhoori Kahani",
+        "artist": "James",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766259203/Hamari_Adhuri_Kahani-Bheegi_Bheegi.Gangster_Film_Song._James_The_Nagor_Baul_.Emraan_Hashmi_Kangana._-_Problem_Nai_Music_g6qkeb.mp3"
+    },
+    {
+        "id": 28,
+        "title": "Hoteo Pare",
+        "artist": "James",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766259203/Hoteo_Pare_Ei_Dekha_Sesh_Dekha_by_James_song_james_-_LAMUI_GAMING_x6h8hp.mp3"
+    },
+    {
+        "id": 29,
+        "title": "Tarai tarai",
+        "artist": "James",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766259203/TAARAI_TAARAI_-_NAGARBAUL_JAMES_with_TAPOSH_FRIENDS_ROBI_YONDER_MUSIC_WIND_OF_CHANGE_PS02_-_Gaan_Bangla_TV_ow3qop.mp3"
+    },
+    {
+        "id": 30,
+        "title": "Jhinti",
+        "artist": "Silajit",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766259428/Jhinti_Tui_Bristi_Hote_Partis_-_Silajit_Lyrical_%E0%A6%9D%E0%A6%BF%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BF_New_Benagli_Lyrical_Song_Love_Song_-_Shemaroo_Bengali_Music_xwecra.mp3"
+    },
+    {
+        "id": 31,
+        "title": "Jawl Phoring",
+        "artist": "Silajit",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766259428/Jawl_Phoring_%E0%A6%9C%E0%A6%B2_%E0%A6%AB%E0%A6%A1%E0%A6%BC%E0%A6%BF%E0%A6%82_Hemlock_Society_Parambrata_Koel_Silajit_Anupam_Srijit_SVF_-_SVF_neu7yg.mp3"
+    },
+    {
+        "id": 32,
+        "title": "ja pakhi ",
+        "artist": "Silajit",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766259428/Ja_Pakhi_Urte_Dilam_Toke_-_Silajit_Lyrical_%E0%A6%AF%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%96%E0%A6%BF_New_Lyrical_Bengali_Song_2023_Shemaroo_-_Shemaroo_Bengali_Music_zabtub.mp3"
+    },
+    {
+        "id": 33,
+        "title": "Dhorbo dhorbo",
+        "artist": "Silajit",
+        "audioUrl": "https://res.cloudinary.com/dktr4ohti/video/upload/v1766259427/Dhorbo_Dhorbo_-_Silajit_zqv8jl.mp3"
     }
 ]

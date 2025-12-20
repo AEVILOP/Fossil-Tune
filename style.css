@@ -351,7 +351,9 @@ body {
     background-color: rgb(54, 53, 53);
     flex: 0 0 calc(25% - 12px);
     min-width: 140px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, display 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .Fossiltune-playlists .card:hover {
@@ -806,7 +808,7 @@ body {
     }
 
     .logo {
-        width: 100px;
+        width: 120px;
     }
 
     .search-wrapper {
@@ -945,7 +947,7 @@ body {
     }
 
     .logo {
-        width: 80px;
+        width: 100px;
     }
 
     .search-wrapper {
@@ -1175,7 +1177,7 @@ body {
     }
 
     .logo {
-        width: 70px;
+        width: 90px;
     }
 
     .search-wrapper {
@@ -1447,7 +1449,7 @@ body {
     }
 
     .logo {
-        width: 60px;
+        width: 75px;
     }
 
     .search-wrapper {
