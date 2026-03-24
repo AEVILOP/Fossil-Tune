@@ -1,90 +1,92 @@
-# 🎵 Fossiltune – Web Music Player
+# 🎵 Fossiltune – React Music Player
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge)](https://fossil-tune.netlify.app/)
 
-Fossiltune is a **responsive web-based music player** built using **HTML, CSS, and Vanilla JavaScript**.  
-It allows users to browse Bengali artists, load artist-wise playlists dynamically, and control audio playback without using any frontend frameworks.
-
-This project demonstrates **core JavaScript fundamentals, DOM manipulation, and audio handling** — not UI cloning.
+Fossiltune is a **modern, responsive web-based music player** rebuilt from the ground up using **React and Vite**.
+It features a premium **Dark Glassmorphism** aesthetic, dynamic state management, and an interactive audio playback experience. 
 
 ---
 
 ## 🚀 Features
 
-- 🎧 Play / Pause music
-- ⏮️ Previous & Next track navigation
-- 🎼 Artist-based dynamic playlists
-- 📂 Songs loaded dynamically from JSON
-- 🔍 Real-time artist search
-- 📱 Fully responsive layout
-- 🍔 Mobile-friendly sidebar navigation
-- 🔊 Volume control with slider
-- ⏱️ Interactive progress bar with seeking
+- 🎧 **Play / Pause & Navigation:** Seamless audio playback with previous/next track controls.
+- 🎼 **Dynamic Artist Imagery:** Dynamically renders artist-specific thumbnails across the player and library.
+- ❤️ **Favorites System:** Functional "Like/Favorite" system with persistent UI state to keep track of your top tracks.
+- 📂 **Component-Based Architecture:** Clean, modular structure using React components.
+- 📱 **Fully Responsive Layout:** Optimized for both desktop and mobile viewing with a collapsible sidebar menu.
+- 🔊 **Interactive Controls:** Volume slider, interactive progress bar with manual seeking, and real-time playback synchronization.
+- 🎨 **Dark Luxury Glassmorphism:** Sleek, modern UI featuring subtle gradients, translucent panels, and smooth micro-animations.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **HTML5**
-- **CSS3 (Responsive, Mobile-first)**
-- **Vanilla JavaScript**
+- **React 19**
+- **Vite** (Next-generation frontend tooling)
+- **Vanilla CSS3** (Custom design system, CSS Variables, Glassmorphism)
 - **HTML Audio API**
-- **JSON (Data source)**
-- **Cloudinary (Audio hosting)**
-
 
 ---
 
 ## 📁 Project Structure
 
-├── index.html
-├── style.css
-├── script.js
-├── song.json
-├── assests/
-└── screenshots/
+```text
+Fossiltune/
+├── frontend/
+│   ├── public/              # Static assets (images, icons)
+│   ├── src/
+│   │   ├── components/      # React functional components
+│   │   │   ├── Sidebar.jsx
+│   │   │   ├── MainContent.jsx
+│   │   │   └── Playbar.jsx
+│   │   ├── App.jsx          # Root component managing global state
+│   │   ├── index.css        # Global styles and CSS variables
+│   │   └── utils.js         # Helper functions (e.g., dynamic image fetching)
+│   ├── package.json
+│   └── vite.config.js
+└── README.md
+```
 
 ---
 
 ## 🧠 Key Implementation Details
 
-* Single `Audio()` instance for centralized playback control
-* Playlist generation using `Array.filter()` based on artist selection
-* Dynamic DOM rendering for songs and artist cards
-* Playback time synchronization using the `timeupdate` event
-* Manual seek support via interactive progress bar
-* Mobile-first UX optimizations (hamburger menu, auto sidebar close)
+* **Global State Management:** `App.jsx` handles the core audio state (`currentSong`, `isPlaying`, `progress`, `volume`, `favorites`) and distributes it via props.
+* **Component Modularity:** Reusable UI elements (`Sidebar`, `MainContent`, `Playbar`) ensure maintainability and separation of concerns.
+* **Real-time Synchronization:** Built-in React `useEffect` hooks and native event listeners tie the `<audio>` reference seamlessly to the React state.
+* **Dynamic Styling:** Utilizes CSS variables for quick thematic changes, unified color palettes (`--accent`, `--bg-highlight`), and responsive grid layouts.
 
 ---
 
-## ⚠️ Limitations
+## 🏃‍♂️ Getting Started
 
-* No backend or authentication system
-* No persistent user data (state resets on refresh)
-* No shuffle or repeat playback modes
-* JSON-based data source only (no database)
-
----
-
-## 🔮 Future Enhancements
-
-* Backend integration using **Node.js & Express**
-* User authentication and personalized playlists
-* Database-driven song and artist management
-* Shuffle and repeat playback functionality
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/Fossiltune.git
+   ```
+2. Navigate to the frontend directory:
+   ```bash
+   cd Fossiltune/frontend
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
 ---
 
 ## 👤 Author
 
-**Anirban Banerjee**
-Frontend Developer (JavaScript)
+**Anirban Banerjee**  
+Frontend Developer
 
 ---
 
 ## 📜 Disclaimer
 
-* This project is built for **educational and portfolio purposes only**
-* All audio content is streamed via public URLs and is **not owned** by the author
-
----
+* This project is built for **educational and portfolio purposes only.**
+* Audio content streamed via public URLs is **not owned** by the author.
