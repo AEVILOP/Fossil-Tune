@@ -1,7 +1,7 @@
 import React from 'react';
 import { getArtistImage } from '../utils';
 
-const Sidebar = ({ isMobileMenuOpen, setIsMobileMenuOpen, library, onPlayLibrarySong, favorites }) => {
+const Sidebar = ({ isMobileMenuOpen, setIsMobileMenuOpen, library, onPlayLibrarySong }) => {
   return (
     <div className={`sidebar ${isMobileMenuOpen ? 'active' : ''}`}>
       <div className="sidebar-header">
@@ -29,14 +29,16 @@ const Sidebar = ({ isMobileMenuOpen, setIsMobileMenuOpen, library, onPlayLibrary
                   setIsMobileMenuOpen(false);
                 }}
               >
-                <img src={getArtistImage(song.artist)} alt="art" style={{borderRadius: '4px', objectFit: 'cover'}} />
+                <div className="track-index">{index + 1}</div>
+                <img src={getArtistImage(song.artist)} alt="art" style={{borderRadius: '50%', objectFit: 'cover'}} />
                 <div className="info">
                   <div className="name">{song.title}</div>
                   <div className="artist">{song.artist}</div>
                 </div>
                 <div className="playnow">
-                  <span>Play now</span>
-                  <img src="/assests/play.svg" alt="playbtn" />
+                  <button className="play-pause-btn">
+                    <img src="/assests/play.svg" alt="playbtn" />
+                  </button>
                 </div>
               </li>
             ))}
@@ -47,36 +49,6 @@ const Sidebar = ({ isMobileMenuOpen, setIsMobileMenuOpen, library, onPlayLibrary
         </div>
       </section>
 
-      <section className="library" style={{ borderTop: '1px solid #282828', marginTop: '16px', paddingTop: '16px', flex: 1 }}>
-        <h2>Your Favorites</h2>
-        <div className="songlist">
-          <ul>
-            {favorites.map((song, index) => (
-              <li 
-                key={`fav-${index}`} 
-                className="songRow" 
-                onClick={() => {
-                  onPlayLibrarySong(song);
-                  setIsMobileMenuOpen(false);
-                }}
-              >
-                <img src={getArtistImage(song.artist)} alt="art" style={{borderRadius: '4px', objectFit: 'cover'}} />
-                <div className="info">
-                  <div className="name">{song.title}</div>
-                  <div className="artist">{song.artist}</div>
-                </div>
-                <div className="playnow">
-                  <span>Play now</span>
-                  <img src="/assests/play.svg" alt="playbtn" />
-                </div>
-              </li>
-            ))}
-            {favorites.length === 0 && (
-              <p className="empty-library" style={{marginTop: '16px'}}>No favorites yet</p>
-            )}
-          </ul>
-        </div>
-      </section>
 
       <footer className="sidebar-footer">
         <div className="footer-content">

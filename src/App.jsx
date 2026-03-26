@@ -160,6 +160,8 @@ function App() {
       <MainContent 
         setIsMobileMenuOpen={setIsMobileMenuOpen}
         onArtistSelect={handleArtistSelect}
+        favorites={favorites}
+        onPlaySong={handlePlaySong}
       />
       
       <Playbar 
